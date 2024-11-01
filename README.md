@@ -8,14 +8,13 @@
         <img src="https://img.shields.io/badge/swiftpm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
     </a>
      <img src="https://img.shields.io/badge/platforms-mac+linux-brightgreen.svg?style=flat" alt="Mac + Linux" />
-    <a href="https://twitter.com/johnsundell">
-        <img src="https://img.shields.io/badge/twitter-@johnsundell-blue.svg?style=flat" alt="Twitter: @johnsundell" />
+    <a href="https://linkedin.com/unicodetech (PVT) LTD">
+        <img src="https://img.shields.io/badge/twitter-@unicodetech-blue.svg?style=flat" alt="linkedin: @unicodetech" />
     </a>
 </p>
 
 Welcome to **Publish**, a static site generator built specifically for Swift developers. It enables entire websites to be built using Swift, and supports themes, plugins and tons of other powerful customization options.
 
-Publish is used to build all of [swiftbysundell.com](https://swiftbysundell.com).
 
 ## Websites as Swift packages
 
@@ -145,11 +144,11 @@ try DeliciousRecipes().publish(using: [
 
 *Above we’re constructing a completely custom publishing pipeline by calling the `publish(using:)` API.*
 
-To learn more about Publish’s built-in publishing steps, [check out this file](https://github.com/JohnSundell/Publish/blob/master/Sources/Publish/API/PublishingStep.swift).
+To learn more about Publish’s built-in publishing steps, [check out this file](https://github.com/unicodetech/Publish/blob/master/Sources/Publish/API/PublishingStep.swift).
 
 ## Building an HTML theme
 
-Publish uses [Plot](https://github.com/johnsundell/plot) as its HTML theming engine, which enables entire HTML pages to be defined using Swift. When using Publish, it’s recommended that you build your own website-specific theme — that can make full use of your own custom metadata, and be completely tailored to fit your website’s design.
+Publish uses [Plot](https://github.com/unicodetech-pvt/plot) as its HTML theming engine, which enables entire HTML pages to be defined using Swift. When using Publish, it’s recommended that you build your own website-specific theme — that can make full use of your own custom metadata, and be completely tailored to fit your website’s design.
 
 Themes are defined using the `Theme` type, which uses an `HTMLFactory` implementation to create all of a website’s HTML pages. Here’s an excerpt of what the implementation for the custom `.delicious` theme used above may look like:
 
@@ -228,7 +227,7 @@ try DeliciousRecipes().publish(using: [
 
 *If your plugin is hosted on GitHub you can use the `publish-plugin` [topic](https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository) so it can be found with the rest of [community plugins](https://github.com/topics/publish-plugin?l=swift).*
 
-For a real-world example of a Publish plugin, check out the [official Splash plugin](https://github.com/johnsundell/splashpublishplugin), which makes it really easy to integrate the [Splash syntax highlighter](https://github.com/johnsundell/splash) with Publish.
+For a real-world example of a Publish plugin, check out the [official Splash plugin](https://github.com/johnsundell/splashpublishplugin), which makes it really easy to integrate the [Splash syntax highlighter](https://github.com/unicodetech-pvt/splash) with Publish.
 
 ## System requirements
 
@@ -244,7 +243,7 @@ Publish is distributed using the [Swift Package Manager](https://swift.org/packa
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/johnsundell/publish.git", from: "0.1.0")
+        .package(url: "https://github.com/unicodetech/publish.git", from: "0.1.0")
     ],
     ...
 )
@@ -321,7 +320,7 @@ You can find a growing collection of additional documentation about Publish’s 
 
 ## Design and goals
 
-Publish was first and foremost designed to be a powerful and heavily customizable tool for building static websites in Swift — starting with [Swift by Sundell](https://swiftbysundell.com), a website which has over 300 individual pages and a pipeline consisting of over 25 publishing steps.
+Publish was first and foremost designed to be a powerful and heavily customizable tool for building static websites in Swift, a website which has over 300 individual pages and a pipeline consisting of over 25 publishing steps.
 
 While the goal is definitely also to make Publish as accessible and easy to use as possible, it will most likely keep being a quite low-level tool that favors code-level control over file system configuration files, and customizability over strongly held conventions.
 
@@ -335,10 +334,10 @@ Publish is developed completely in the open, and your contributions are more tha
 
 Before you start using Publish in any of your projects, it’s highly recommended that you spend a few minutes familiarizing yourself with its documentation and internal implementation, so that you’ll be ready to tackle any issues or edge cases that you might encounter.
 
-Since this is a very young project, it’s likely to have many limitations and missing features, which is something that can really only be discovered and addressed as more people start using it. While Publish is used in production to build all of [Swift by Sundell](https://swiftbysundell.com), it’s recommended that you first try it out for your specific use case, to make sure it supports the features that you need.
+Since this is a very young project, it’s likely to have many limitations and missing features, which is something that can really only be discovered and addressed as more people start using it. It’s recommended that you first try it out for your specific use case, to make sure it supports the features that you need.
 
 This project does not come with GitHub Issues-based support, and users are instead encouraged to become active participants in its continued development — by fixing any bugs that they encounter, or by improving the documentation wherever it’s found to be lacking.
 
-If you wish to make a change, [open a Pull Request](https://github.com/JohnSundell/Publish/pull/new) — even if it just contains a draft of the changes you’re planning, or a test that reproduces an issue — and we can discuss it further from there.
+If you wish to make a change, [open a Pull Request](https://github.com/unicodetech-pvt/Publish/pull/new) — even if it just contains a draft of the changes you’re planning, or a test that reproduces an issue — and we can discuss it further from there.
 
 Hope you’ll enjoy using Publish!
